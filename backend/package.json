@@ -1,0 +1,22 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "populate": "node ./populateDb.js",
+    "start": "node ./index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "level": "^6.0.1",
+    "lokijs": "^1.5.11",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "random-text-generator": "^3.2.1",
+    "nicknames": "^1.0.2"
+  }
+}

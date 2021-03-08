@@ -22,13 +22,14 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              "src/styles.less"
+              "src/styles/styles.less",
+              "src/styles/bootstrap.min.css"
             ],
             "scripts": []
           },
@@ -67,7 +68,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ng-comments:build"
+            "browserTarget": "ng-comments:build",
+            "proxyConfig": "proxy.conf.json"
           },
           "configurations": {
             "production": {

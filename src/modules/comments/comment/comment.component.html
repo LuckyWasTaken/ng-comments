@@ -1,0 +1,10 @@
+<section class="comment">
+    <div class="comment__heading text-secondary">
+        <div>{{ comment?.author_name }}</div>
+        <div>{{ comment?.datetime | date:'MMM d, y @ h:mm' }}</div>
+    </div>
+    <p>{{ comment?.body }}</p>
+    <div class="comment__reply">
+        <button class="btn btn-secondary">Reply</button>
+    </div>
+</section>

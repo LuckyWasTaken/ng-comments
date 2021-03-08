@@ -1,0 +1,4 @@
+<div *ngFor="let comment of comments$ | async; trackBy:trackById; let index=index">
+    <app-comment [comment]="comment" class="border comment"></app-comment>
+    <app-comments [parentId]="comment.id" [indent]="indent + 1"></app-comments>
+</div>
