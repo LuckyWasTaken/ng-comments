@@ -15,4 +15,10 @@ export class CommentsService {
             this.commentsSource$.next(comments);
         });
     }
+
+    reply(username: string, body: string, parentId: string) {
+        this.http.post<IComment>('/api', {author_name: username, body, parent_id: parentId}).subscribe(comment => {
+            this.commentsSource$.next([...this.commentsSource$.value, comment]);
+        })
+    }
 }

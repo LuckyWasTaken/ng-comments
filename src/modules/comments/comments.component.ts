@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component, HostBinding, Input, OnInit} from "@angular/core";
-import {Observable} from "rxjs";
+import {Observable, of} from "rxjs";
 import {filter, map} from 'rxjs/operators';
 import {IComment} from "src/dto/comment";
 import {CommentsService} from "src/services/comments.service";
@@ -26,7 +26,7 @@ export class CommentsComponent implements OnInit {
     @Input()
     readonly parentId: string | null = null;
 
-    comments$: Observable<ReadonlyArray<IComment>> | null = null;
+    comments$: Observable<ReadonlyArray<IComment>> = of([]);
 
     constructor(private readonly commentsService: CommentsService) {}
 

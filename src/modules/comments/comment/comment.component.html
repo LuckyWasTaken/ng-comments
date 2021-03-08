@@ -5,6 +5,6 @@
     </div>
     <p>{{ comment?.body }}</p>
     <div class="comment__reply">
-        <button class="btn btn-secondary">Reply</button>
+        <button (click)="addReply()" class="btn btn-secondary">Reply</button>
     </div>
 </section>

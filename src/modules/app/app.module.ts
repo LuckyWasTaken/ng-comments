@@ -4,6 +4,7 @@ import {HttpClientModule} from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import {CommentsModule} from '../comments/comments.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -11,6 +12,7 @@ import {CommentsModule} from '../comments/comments.module';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HttpClientModule,
 
     CommentsModule,

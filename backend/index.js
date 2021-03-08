@@ -11,7 +11,6 @@ db.loadDatabase({}, () => {
     const commentsCollection = db.getCollection('comments');
 
     app.post('/', (req, res) => {
-        console.log(req.body);
         const {author_name, body, parent_id} = req.body;
 
         if (!(author_name && body)) {
@@ -20,10 +19,11 @@ db.loadDatabase({}, () => {
 
         const id = uuid();
         const datetime = new Date();
+        const comment = {id, parent_id, author_name, body, datetime}
 
-        commentsCollection.insert({id, parent_id, author_name, body, datetime});
+        commentsCollection.insert(comment);
 
-        res.send();
+        res.send(comment);
     });
 
     app.get('/', (req, res) => {
