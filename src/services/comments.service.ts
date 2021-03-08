@@ -1,7 +1,7 @@
-import {HttpClient} from "@angular/common/http";
-import {Injectable} from "@angular/core";
-import {BehaviorSubject} from "rxjs";
-import {IComment} from  "src/dto/comment";
+import {HttpClient} from '@angular/common/http';
+import {Injectable} from '@angular/core';
+import {BehaviorSubject} from 'rxjs';
+import {IComment} from 'src/dto/comment';
 
 @Injectable({
     providedIn: 'root',
@@ -19,6 +19,6 @@ export class CommentsService {
     reply(username: string, body: string, parentId: string) {
         this.http.post<IComment>('/api', {author_name: username, body, parent_id: parentId}).subscribe(comment => {
             this.commentsSource$.next([...this.commentsSource$.value, comment]);
-        })
+        });
     }
 }

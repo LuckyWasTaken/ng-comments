@@ -1,7 +1,7 @@
-import {Injectable} from "@angular/core";
+import {Injectable} from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import {CommentsService} from "src/services/comments.service";
-import {ReplyComponent} from "./reply.component";
+import {CommentsService} from 'src/services/comments.service';
+import {ReplyComponent} from './reply.component';
 
 @Injectable()
 export class ReplyService {

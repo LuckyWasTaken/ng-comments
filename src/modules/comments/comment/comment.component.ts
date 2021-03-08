@@ -1,6 +1,6 @@
-import {ChangeDetectionStrategy, Component, Input} from "@angular/core";
-import {IComment} from "src/dto/comment";
-import {ReplyService} from "src/modules/reply/reply.service";
+import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
+import {IComment} from 'src/dto/comment';
+import {ReplyService} from 'src/modules/reply/reply.service';
 
 @Component({
     selector: 'app-comment',

@@ -1,8 +1,8 @@
-import {ChangeDetectionStrategy, Component, HostBinding, Input, OnInit} from "@angular/core";
-import {Observable, of} from "rxjs";
+import {ChangeDetectionStrategy, Component, HostBinding, Input, OnInit} from '@angular/core';
+import {Observable, of} from 'rxjs';
 import {filter, map} from 'rxjs/operators';
-import {IComment} from "src/dto/comment";
-import {CommentsService} from "src/services/comments.service";
+import {IComment} from 'src/dto/comment';
+import {CommentsService} from 'src/services/comments.service';
 
 function isNotNull<T>(arg: T): arg is Exclude<T, null> {
     return arg !== null;
